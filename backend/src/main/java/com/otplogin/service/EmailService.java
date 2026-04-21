@@ -30,7 +30,7 @@ public class EmailService {
             System.out.println("OTP sent to: " + to);
 
         } catch (Exception e) {
-            System.err.println("❌ Email failed: " + e.getMessage());
+            System.err.println("Email failed: " + e.getMessage());
         }
     }
 
