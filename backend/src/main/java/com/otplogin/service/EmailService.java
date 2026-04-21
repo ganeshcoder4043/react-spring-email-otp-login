@@ -20,14 +20,14 @@ public class EmailService {
             MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
             helper.setTo(to);
-            helper.setSubject("🔐 Your OTP Code - Secure Login");
+            helper.setSubject("Your OTP Code - Secure Login");
             helper.setFrom("your-email@gmail.com");
 
             String htmlContent = buildOtpEmailTemplate(name, otp);
             helper.setText(htmlContent, true);
 
             mailSender.send(message);
-            System.out.println("✅ OTP sent to: " + to);
+            System.out.println("OTP sent to: " + to);
 
         } catch (Exception e) {
             System.err.println("❌ Email failed: " + e.getMessage());
